@@ -1,6 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Link from '../components/Link'
+import Link from '../src/components/Link'
+import GlobalStyle from '../src/theme/GlobalStyle';
 import styles from '../styles/Home.module.css'
 
 

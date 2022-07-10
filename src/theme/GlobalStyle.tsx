@@ -2,7 +2,8 @@ import { theme } from './theme';
 
 export default function GlobalStyle() {
     return (
-        <style>{`
+        //@ts-ignore
+        <style global jsx>{`
         * {
           box-sizing: border-box;
           padding: 0;

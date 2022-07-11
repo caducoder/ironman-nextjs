@@ -2,9 +2,10 @@ import Footer from '../../components/Footer'
 import Link from '../../components/Link'
 import { theme } from '../../theme/theme';
 import { Image, Box, Text, Icon, Input, Button } from '../../theme/components';
+import PageTitle from '../../components/PageTitle';
 
-const LOGO_ALURA_URL = '/images/alura-logo.svg';
-const SIDE_IMAGE_URL = '/images/alura-cases.png'
+const LOGO_ALURA_URL = '/images/marvel-logo.png';
+const SIDE_IMAGE_URL = '/images/iron-man.jpg'
 
 function SideImage() {
   return (
@@ -96,6 +97,7 @@ function SideImage() {
 export default function HomeScreen() {
   return (
     <Box>
+      <PageTitle title={'Home - Iron Man'} />
       <Box
         as="main"
         styleSheet={{
@@ -163,7 +165,7 @@ export default function HomeScreen() {
               >
                 <Box>
                   <Link
-                    href="/faq"
+                    href="/curiosidades"
                     styleSheet={{
                       display: "inline-flex",
                       alignItems: {
@@ -193,7 +195,7 @@ export default function HomeScreen() {
                         },
                       }}
                     >
-                      O que tem de novo?
+                      Homem de Ferro
                     </Text>
                     <Text
                       styleSheet={{
@@ -205,11 +207,12 @@ export default function HomeScreen() {
                         alignItems: 'center',
                       }}
                     >
-                      <Text>Confira as principais dúvidas</Text>
+                      <Text>Curiosidades</Text>
                       <Icon
                         styleSheet={{
                           iconVariant: 'chevronRight',
                           marginLeft: theme.space.xpx,
+
                         }}
                         aria-hidden="true"
                       />
@@ -230,7 +233,7 @@ export default function HomeScreen() {
                       color: theme.colors.neutral["900"],
                     }}
                   >
-                    Alura Cases
+                    Iron Man
                   </Text>
                   <Text
                     as="p"
@@ -240,7 +243,7 @@ export default function HomeScreen() {
                       marginTop: theme.space.x6,
                     }}
                   >
-                    Aqui você vai ter acesso a discussões avançadas: as principais decisões sobre arquitetura e design de sistemas. Aprenda através das descobertas que as principais empresas de tecnologia enfrentam!
+                    O Homem de Ferro (Iron Man) foi um personagem dos quadrinhos publicados pela Marvel Comics. Sua verdadeira identidade é o empresário e bilionário Tony Stark, que usou armaduras de alta tecnologia no combate ao crime.
                   </Text>
                   <Text
                     as="p"
@@ -250,7 +253,7 @@ export default function HomeScreen() {
                       marginTop: theme.space.x6,
                     }}
                   >
-                    Quer testar antes de todo mundo?
+                    Quer receber novidades antes de todo mundo?
                   </Text>
                 </Box>
                 <Box

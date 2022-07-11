@@ -1,6 +1,8 @@
 import Head from "next/head";
 import Link from "../src/components/Link";
 import PageTitle from "../src/components/PageTitle";
+import { Box } from "../src/theme/components";
+import { theme } from "../src/theme/theme";
 
 // interface FAQ_Response {
 //   faq: {
@@ -49,22 +51,32 @@ const facts = [
 function PaginaFAQ() {
 
   return ( 
-    <div>
+    <Box
+      as="main"
+      styleSheet={{
+        flex: 1,
+        backgroundColor: theme.colors.neutral["050"],
+        padding: {
+          xs: theme.space.x6,
+          sm: theme.space.x12,
+        }
+      }}
+    >
       <PageTitle title={'Iron Man - Curiosidades'} />
       <h1>
         Iron Man - Curiosidades
       </h1>
-        <Link href="/">Ir para a Home</Link>
-        <ul>
-          {facts.map(({title, curiosity}, index) => (
-            <li key={index}>
-              <h2>{title}</h2>
-              <p>{curiosity}</p>
-            </li>
-          ))}
-        </ul>
-        <small>Fonte: <a href="https://www.adorocinema.com/filmes/filme-53751/curiosidades/">AdoroCinema</a></small>
-    </div>
+      <Link href="/">Ir para a Home</Link>
+      <ul>
+        {facts.map(({title, curiosity}, index) => (
+          <li key={index}>
+            <h2>{title}</h2>
+            <p>{curiosity}</p>
+          </li>
+        ))}
+      </ul>
+      <small>Fonte: <a href="https://www.adorocinema.com/filmes/filme-53751/curiosidades/">AdoroCinema</a></small>
+    </Box>
   );
 }
 

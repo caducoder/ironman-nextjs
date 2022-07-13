@@ -1,9 +1,9 @@
 import NextLink from 'next/link'
 
-function Link({children, href, styleSheet, ...props}: {children: string | JSX.Element, href: string, styleSheet?: any}) {
+function Link({children, href, target = "_self", styleSheet, ...props}: {children: string | JSX.Element, href: string, target?: string, styleSheet?: any}) {
     return ( 
         <NextLink href={href}>
-            <a {...props}>{children}</a>
+            <a target={target} {...props}>{children}</a>
         </NextLink>
      );
 }
